@@ -79,4 +79,9 @@ class String
     colorize(4)
   end
 
+  def is_i?
+     /\A[-+]?\d+\z/ === self
+  end
+
+
 end

@@ -1,5 +1,4 @@
-require_relative "Addons/colorize.rb"
-require_relative "Addons/search.rb"
+require_relative "include.rb"
 
 #Script start
 class Run
@@ -7,8 +6,15 @@ class Run
     #welcome message
     puts "Welcome, please wait while we fetch the required files..#{'.'.flash}".bg_yellow
     #load files -> display message acknowledging this |database or spreadsheet?
-    search = Search.new
     #do something in files and stop playing with colours.
+    puts "Welcome to main menu".bold
+    puts "Please input manufacturer"
+    manufacturer = gets.chomp
+
+  @@validate = Validation.new(manufacturer, "string")
+
+
+
   end
 end
 
